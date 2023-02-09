@@ -1,0 +1,17 @@
+.link{
+    color: white;
+    text-decoration: none;
+    
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    &:hover{
+        color: gray;
+    }
+}
+
+.btn{
+    box-shadow: 1px 3px 9px rgba($color: #000000, $alpha: 0.35);
+}

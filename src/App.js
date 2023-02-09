@@ -4,13 +4,15 @@ import "bootstrap/dist/js/bootstrap";
 import Filters from "./components/Filters/Filters";
 import Cards from "./components/Cards/Cards";
 import Pagination from "./components/Pagination/Pagination";
+import Search from './components/Search/Search';
 
 function App() {
   let [pageNumber, setPageNumber] = useState(1);
+  let [search, setSearch] = useState("");
   let [fetchedData, updateFetchedData] = useState([]);
   let { info, results} = fetchedData;
 
-  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}`;
+  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`;
 
   useEffect(() => {
     (async function () {
@@ -22,6 +24,7 @@ function App() {
   return (
     <div className="App">
       <h1 className="text-center fredoka text-secondary mt-4 mb-4">Rick & Morty <span className="text-info">Wiki</span></h1>
+      <Search setPageNumber={setPageNumber} setSearch={setSearch}/>
       <div className="container">
         <div className="row">
           <div className="col-3">
@@ -35,7 +38,7 @@ function App() {
         </div>
       </div>
       <div className="">
-        <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber} />
+        <Pagination info={info} pageNumber={pageNumber} setPageNumber={setPageNumber} />
       </div>
     </div>
   );
