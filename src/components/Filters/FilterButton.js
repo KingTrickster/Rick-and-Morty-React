@@ -1,6 +1,6 @@
 import React from "react";
 
-const FilterButton = ({ name, index, items }) => {
+const FilterButton = ({ name, index, items, task, setPageNumber }) => {
   return (
     <div>
       <style jsx>
@@ -16,6 +16,10 @@ const FilterButton = ({ name, index, items }) => {
       </style>
       <div className="form-check">
         <input
+          onClick={() => {
+            setPageNumber(1);
+            task(items);
+          }}
           className="form-check-input x"
           type="radio"
           name={name}
