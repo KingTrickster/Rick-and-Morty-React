@@ -40,7 +40,7 @@ const Location = () => {
         </h6>
       </div>
       <div className="row">
-        <div className="col-3">
+        <div className="col-lg-3 col-12">
           <h4 className="text-center mb-4">Pick Episode</h4>
           <InputGroup
             setEpisodeId={setLocationId}
@@ -48,7 +48,7 @@ const Location = () => {
             total={126}
           />
         </div>
-        <div className="col-8">
+        <div className="col-lg-8 col-12">
           <div className="row">
             <Cards results={results} />
           </div>
