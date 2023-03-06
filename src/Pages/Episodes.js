@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Cards from "../components/Cards/Cards";
 import InputGroup from "../components/Filters/Category/InputGroup";
+import Footer from "../components/Footer/Footer";
 
 const Episodes = () => {
   let [episodeId, setEpisodeId] = useState(1);
@@ -45,6 +46,9 @@ const Episodes = () => {
             <Cards results={results} />
           </div>
         </div>
+      </div>
+      <div className="footer">
+        <Footer />
       </div>
     </div>
   );

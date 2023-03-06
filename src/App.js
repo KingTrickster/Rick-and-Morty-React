@@ -11,6 +11,7 @@ import Episodes from "./Pages/Episodes";
 import Location from "./Pages/Location";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -69,6 +70,9 @@ const Home = () => {
           pageNumber={pageNumber}
           setPageNumber={setPageNumber}
         />
+      </div>
+      <div className="footer">
+        <Footer />
       </div>
     </div>
   );

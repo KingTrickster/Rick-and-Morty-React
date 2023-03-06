@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Cards from "../components/Cards/Cards";
 import InputGroup from "../components/Filters/Category/InputGroup";
+import Footer from "../components/Footer/Footer";
 
 const Location = () => {
   let [locationId, setLocationId] = useState(1);
@@ -53,6 +54,9 @@ const Location = () => {
             <Cards results={results} />
           </div>
         </div>
+      </div>
+      <div className="footer">
+        <Footer />
       </div>
     </div>
   );
